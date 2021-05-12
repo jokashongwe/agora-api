@@ -14,6 +14,7 @@ import { UtilisateurSchema } from './schemas/utilisateur.schema';
     ])
   ],
   controllers: [UtilisateurController],
-  providers: [UtilisateurService]
+  providers: [UtilisateurService],
+  exports: [UtilisateurService]
 })
 export class UtilisateurModule { }

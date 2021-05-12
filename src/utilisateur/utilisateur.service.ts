@@ -17,16 +17,12 @@ export class UtilisateurService {
         return users;
     }
 
-    public async getUtilisateurByUsername(username: string): Promise<any> {
+    public async getUtilisateurByUsername(username: string): Promise<UtilisateurDto> {
         const user = await this.utilisateurModel.findOne({ username }).exec();
         if (!user) {
             throw new HttpException('No user corresponding to this request', 404);
         }
-        return {
-            username: user.username,
-            profile: user.profile,
-            paymentInfo: user.paymentInfo
-        }
+        return user;
     }
 
     private hashPassword(playTextPassword: string): string{

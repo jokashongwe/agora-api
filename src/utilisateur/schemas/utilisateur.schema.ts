@@ -1,10 +1,10 @@
 import * as mongoose from 'mongoose';
 
 export const UtilisateurSchema = new mongoose.Schema({ 
-    username: String,
+    username: {type: String, unique: true, required: true},
     password: String,
-    createdDate: Date,
-    isActive: Boolean,
+    createdDate: {type: Date, default: Date.now()},
+    isActive: {type: Boolean, default: false},
     profile: mongoose.Schema.Types.Mixed,
     paymentInfo: mongoose.Schema.Types.Mixed
 });
