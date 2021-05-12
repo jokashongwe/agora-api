@@ -1,0 +1,23 @@
+{
+    "username": "jk001",
+    "password": "Secret123",
+    "createdDate": "2021-05-12",
+    "profile": {
+        "email": "jokashongwe@gmail.com",
+        "firstname": "Jonathan",
+        "lastname": "Kashongwe",
+        "photo": "",
+        "cover":"",
+        "shippingAdress": "4, Kaniki,Mama Mobutu, Mont Ngafula, Kinshasa",
+        "country": "DR Congo",
+        "phone": "+243810120658"
+    },
+    "paymentInfo": {
+        "cardHolderName": "",
+        "cardHolderNumber": "",
+        "isMobileMoney": "",
+        "cardLastDigit": ""
+    }
+}
+
+
