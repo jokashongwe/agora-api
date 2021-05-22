@@ -8,7 +8,7 @@ export class ProductsService {
   constructor(private httpService: HttpService) {
     this.rapidApiOption = {
       aliExpress: {
-        url: 'https://ali-express1.p.rapidapi.com/productsByCategoryV2/205838503',
+        url: 'https://ali-express1.p.rapidapi.com/search',
         headers: {
           'x-rapidapi-key':
             'c2d1db1d94msh3794ee68657eb86p1d7f60jsn95359e62701f',
@@ -31,11 +31,9 @@ export class ProductsService {
       .get(this.rapidApiOption.aliExpress.url, {
         headers: this.rapidApiOption.aliExpress.headers,
         params: {
-          sort_type: 'default',
           page: `${page}`,
           query: keyword,
           page_size: '10',
-          sort_order: 'default',
         },
       })
       .toPromise();
