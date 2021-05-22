@@ -34,7 +34,7 @@ export class ProductsService {
           sort_type: 'default',
           page: `${page}`,
           query: keyword,
-          page_size: '20',
+          page_size: '10',
           sort_order: 'default',
         },
       })
