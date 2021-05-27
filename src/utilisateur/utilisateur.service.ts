@@ -26,7 +26,8 @@ export class UtilisateurService {
     }
 
     private hashPassword(playTextPassword: string): string{
-        return bcrypt.hashSync(playTextPassword, 243);
+        const salt = bcrypt.genSaltSync(10);
+        return bcrypt.hashSync(playTextPassword, salt);
     }
 
     public async postUtilisateur(nouvelUtilisateur: UtilisateurDto) {
